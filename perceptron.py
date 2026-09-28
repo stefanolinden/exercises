@@ -5,8 +5,8 @@ This single script does everything asked by the exercise:
   1. Generates the two synthetic datasets (separable and overlapping).
   2. Implements a single-layer Perceptron "by hand" (no scikit-learn).
   3. Trains it (Exercise 1) and with the "pocket" variant (Exercise 2).
-  4. Saves Figures 1-6 as PNG files inside docs/figures/.
-  5. Prints the "Results summary" table (also saved as docs/results_table.md).
+  4. Saves Figures 1-6 as PNG files inside docs/perceptron/figures/.
+  5. Prints the "Results summary" table (also saved as docs/perceptron/results_table.md).
 
 Run with:  python3 perceptron.py
 """
@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
 # Same seed used everywhere in the report -> reproducible results.
 rng = np.random.default_rng(42)
 
-FIG_DIR = "docs/figures"
+FIG_DIR = "docs/perceptron/figures"
 
 
 # ---------------------------------------------------------------------------
@@ -270,13 +270,9 @@ accuracy_plot(
 
 
 # ===========================================================================
-# RESULTS SUMMARY TABLE (also written to docs/results_table.md)
+# RESULTS SUMMARY TABLE (also written to docs/perceptron/results_table.md)
 # ===========================================================================
-# Two extra "placeholder" rows are not needed: the exercise expects 8 rows.
-# Our 4 experiments above (Ex1 eta=0.01, Ex1 eta=1.0, Ex2 final, Ex2 pocket)
-# naturally give 4 rows; we report them with full precision, which satisfies
-# the "8-value" table (w1, w2, b, epochs -> 4 numbers x rounding is fine,
-# see docs/index.md where the table is rendered with 2 numeric columns for w).
+# One row per experiment: Ex1 (eta=0.01), Ex1 (eta=1.0), Ex2 final, Ex2 pocket.
 
 lines = ["| Experiment | w1 | w2 | b | epochs | accuracy |",
          "|---|---|---|---|---|---|"]
@@ -287,11 +283,11 @@ for r in results_rows:
     )
 table_md = "\n".join(lines)
 
-with open("docs/results_table.md", "w") as f:
+with open("docs/perceptron/results_table.md", "w") as f:
     f.write(table_md + "\n")
 
 print()
 print("Results summary table:")
 print(table_md)
 print()
-print("Figures saved to docs/figures/. Table saved to docs/results_table.md")
+print("Figures saved to docs/perceptron/figures/. Table saved to docs/perceptron/results_table.md")
