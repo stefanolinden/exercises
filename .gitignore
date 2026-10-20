@@ -1,1 +1,3 @@
 __pycache__/
+docs/vae/data/
+*.pt

@@ -36,3 +36,14 @@ python3 docs/mlp/code/ex2_binary.py
 python3 docs/mlp/code/ex3_multiclass.py
 python3 docs/mlp/code/ex4_deeper.py
 ```
+
+## VAE exercise
+
+Report published at **https://stefanolinden.github.io/exercises/vae/**
+(source: `docs/vae/index.md`, code in `docs/vae/code/`, figures in `docs/vae/figures/`).
+
+```bash
+pip install -r requirements.txt
+python3 docs/vae/code/ex1_vae_d16.py   # run first: saves the d = 16 model used in Exercise 2
+python3 docs/vae/code/ex2_vae_d2.py
+```

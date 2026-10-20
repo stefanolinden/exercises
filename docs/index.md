@@ -6,3 +6,4 @@ title: Exercises
 
 - [Perceptron](perceptron/)
 - [MLP](mlp/)
+- [VAE](vae/)
