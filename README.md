@@ -23,3 +23,16 @@ python3 perceptron.py
 
 Uses a fixed seed (`np.random.default_rng(42)`) everywhere, so results and
 figures are identical on every run.
+
+## MLP exercise
+
+Report published at **https://stefanolinden.github.io/exercises/mlp/**
+(source: `docs/mlp/index.md`, code in `docs/mlp/code/`, figures in `docs/mlp/figures/`).
+
+```bash
+pip install -r requirements.txt
+python3 docs/mlp/code/ex1_check.py
+python3 docs/mlp/code/ex2_binary.py
+python3 docs/mlp/code/ex3_multiclass.py
+python3 docs/mlp/code/ex4_deeper.py
+```
